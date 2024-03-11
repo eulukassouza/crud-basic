@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing Effect</title>
+  <style>
+    /* Estilos para o efeito de digitação */
+    #typing-text {
+      overflow: hidden; /* Garante que o texto não aparece fora do contêiner */
+      border-right: 2px solid #000; /* Simula o cursor piscando */
+      white-space: nowrap; /* Impede quebras de linha */
+      margin: 0; /* Remove margens padrão do parágrafo */
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <p id="typing-text"></p>
+
+  <script>
+    // Texto que você deseja exibir com o efeito de digitação
+    const textToType = "Criando um novo mundo através de códigos";
+
+    // Elemento do parágrafo
+    const typingElement = document.getElementById('typing-text');
+
+    // Função para adicionar o efeito de digitação
+    function typeText(index) {
+      typingElement.textContent = textToType.slice(0, index);
+      if (index < textToType.length) {
+        setTimeout(() => {
+          typeText(index + 1);
+        }, 40); // Ajuste a velocidade da digitação ajustando este valor
+      }
+    }
+
+    // Inicia o efeito de digitação
+    typeText(0);
+  </script>
+
+</body>
+</html>

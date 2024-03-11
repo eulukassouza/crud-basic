@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>GitHub Style Task Manager</title>
+</head>
+<body class="bg-gray-800 text-white">
+
+    <div class="container mx-auto mt-5">
+        <div class="card bg-gray-900">
+            <div class="card-header flex justify-between items-center border-b border-gray-700 p-4">
+                <h1 class="card-title text-2xl font-semibold">GitHub Task Manager</h1>
+                <button id="addTaskBtn" class="btn btn-success">Add Task</button>
+            </div>
+            <ul id="taskList" class="list-group list-group-flush"></ul>
+        </div>
+    </div>
+
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModalBtn">&times;</span>
+            <h2 class="text-xl font-semibold mb-4">Add Task</h2>
+            <input type="text" id="taskInput" class="form-input mb-2 p-2 w-full" placeholder="Enter task...">
+            <button id="saveTaskBtn" class="btn bg-blue-800">Save</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

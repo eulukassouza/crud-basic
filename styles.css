@@ -1,22 +1,60 @@
 body {
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .container {
-    display: flex;
-  }
-  
-  .list {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
-    min-height: 150px;
-  }
-  
-  .list div {
-    background-color: #f9f9f9;
-    padding: 8px;
-    margin: 5px;
-    cursor: move;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.chat-container {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-box {
+  padding: 20px;
+  height: 300px;
+  overflow-y: scroll;
+}
+
+.chat-message {
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.received {
+  background-color: #e0e0e0;
+  text-align: left;
+}
+
+.sent {
+  background-color: #4caf50;
+  color: #fff;
+  text-align: right;
+}
+
+.user-input {
+  display: flex;
+  padding: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+}
